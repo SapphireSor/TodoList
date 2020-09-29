@@ -16,9 +16,10 @@ export default function AddTodo ({addNewTodo}) {
         onChangeText={changeTextHandler}
       />
       <Icon
+        style={styles.addButton}
         reverse
         name='add'
-        color='#517fa4'
+        color='#845A6D'
         onPress={() => addNewTodo(newTodo)}
       />
     </View>
@@ -27,19 +28,25 @@ export default function AddTodo ({addNewTodo}) {
 
 const styles = StyleSheet.create({
   addView: {
-    paddingTop: 10,
-    paddingHorizontal: 8,
-    width: '90%',
+    flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    flexDirection: 'row',
+    paddingTop: 10,
+    paddingLeft: 8,
+    width: '90%',
+    
   },
   input: {
-    width: '80%',
+    flex: 2,
     marginBottom: 10,
     paddingHorizontal: 8,
     paddingVertical:6,
-    borderBottomColor: '#ddd',
+    borderBottomColor: '#B0DAF1',
     borderBottomWidth: 1,
+    fontSize: 18,
+    color: '#fff',
+  },
+  addButton: {
+    flex: 1,
   },
 })
